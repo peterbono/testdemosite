@@ -80,13 +80,16 @@ $table_prefix = 'wp_';
  * Il est fortement recommandé que les développeurs d’extensions et
  * de thèmes se servent de WP_DEBUG dans leur environnement de
  * développement.
- *
  * Pour plus d’information sur les autres constantes qui peuvent être utilisées
  * pour le déboguage, rendez-vous sur le Codex.
  *
  * @link https://fr.wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
+
+define('WP_MEMORY_LIMIT', '256M');
+define ('DISALLOW_FILE_EDIT', true, true  );
+
 
 /* C’est tout, ne touchez pas à ce qui suit ! Bonne publication. */
 
@@ -99,3 +102,4 @@ define('FS_METHOD', 'direct');
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
